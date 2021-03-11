@@ -1,27 +1,22 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 
-export default class Navbar extends Component{
+export default class Navbar extends React.Component{
     render(){
         return(
-            <nav ClassName="navbar navbar-expand-lg navbar-light bg-light">
-                <Link ClassName="navbar-brand" href="#">Navbar</Link>
-                <button ClassName="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span ClassName="navbar-toggler-icon"></span>
-                </button>
-                <div ClassName="collapse navbar-collapse" id="navbarNav">
-                    <ul ClassName="navbar-nav">
-                        <li ClassName="nav-item active">
-                            <Link to="/" ClassName="nav-link">Applications <span ClassName="sr-only">(current)</span></Link>
+            <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+                <Link to = "/" className="navbar-brand">ApplicationTracker</Link>
+                <div className="collapse navbar-collapse">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="navbar-item active">
+                            <Link to="/" className="nav-link">Applications <span className="sr-only">(current)</span></Link>
                         </li>
-                        <li ClassName="nav-item">
-                            <Link to="/user" ClassName="nav-link">Create User</Link>
+                        <li className="navbar-item">
+                            <Link to="/user" className="nav-link">Create Users</Link>
                         </li>
-                        <li ClassName="nav-item">
-                            <Link ClassName="nav-link" href="#">Pricing</Link>
-                        </li>
-                        <li ClassName="nav-item">
-                            <Link ClassName="nav-link disabled" href="#">Disabled</Link>
+                        <li className="navbar-item">
+                            <Link to="/application" className="nav-link">Create Application</Link>
                         </li>
                     </ul>
                 </div>
