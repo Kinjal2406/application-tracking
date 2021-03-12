@@ -12,6 +12,7 @@ export default class CreateApplication extends Component{
         this.onChangeLink = this.onChangeLink.bind(this);
         this.onChangePosition = this.onChangePosition.bind(this);
         this.onChangeDate = this.onChangeDate.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             username:'',
@@ -73,7 +74,7 @@ export default class CreateApplication extends Component{
 
         console.log(application);
 
-        window.location = '/';
+        //window.location = '/';
     }
 
     render(){
